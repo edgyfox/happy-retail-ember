@@ -1,4 +1,5 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
+  
   <div class="container-fluid">
     
     <ul class="nav navbar-nav">
@@ -9,16 +10,14 @@
    
     <ul class="nav navbar-nav">
 
-     <li class="active">{{#link-to 'home' invokeAction=(action "makeInvisible")}}Home{{/link-to}}</li>
+     <li class="active">{{#link-to 'home'}}Home{{/link-to}}</li>
      
-     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Category <span class="caret"></span></a>
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
         <ul class="dropdown-menu">
-               
-           <li>{{#link-to 'women' invokeAction=(action "makeInvisible") }}Women{{/link-to}}</li>
-           <li>{{#link-to 'men' invokeAction=(action "makeInvisible") }}Men{{/link-to}}</li>
-          
-
-      </ul>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+        
+        </ul>
       </li>
 
       
@@ -59,32 +58,13 @@
         </ul>
       </li>
 
-        <li>{{#link-to 'signup' invokeAction=(action "makeInvisible")}}<span class="glyphicon glyphicon-user"></span>Sign Up{{/link-to}}</li> 
+      <li>{{#link-to 'signup' }}signup{{/link-to}}</li>
+{{!-- <li>{{#link-to 'signup' invokeAction=(action 'makeInvisible')}}SIGN UP{{/link-to}}</li> --}}
       
-
+      {{!-- <li>{{#link-to 'signup' }}<span class="glyphicon glyphicon-user"></span> Sign Up{{/link-to}}</li>
+       --}}
     </ul>
   
   
   </div>
 </nav>
-
-
-{{#if isVisible}}
-{{slide-show}}
- 
-{{else}}
-
-{{outlet}}
-{{/if}} 
-
-{{foot-er}}
-
-
-
-
-
-
-
-
-
-
